@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.9937df53.chunk.css",
-    "main.js": "/static/js/main.2bde7cc9.chunk.js",
-    "main.js.map": "/static/js/main.2bde7cc9.chunk.js.map",
+    "main.css": "/static/css/main.9d6f33c9.chunk.css",
+    "main.js": "/static/js/main.3b519246.chunk.js",
+    "main.js.map": "/static/js/main.3b519246.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3125c67e.js",
     "runtime-main.js.map": "/static/js/runtime-main.3125c67e.js.map",
     "static/css/2.bf0413c3.chunk.css": "/static/css/2.bf0413c3.chunk.css",
-    "static/js/2.e624162f.chunk.js": "/static/js/2.e624162f.chunk.js",
-    "static/js/2.e624162f.chunk.js.map": "/static/js/2.e624162f.chunk.js.map",
+    "static/js/2.b67fb69a.chunk.js": "/static/js/2.b67fb69a.chunk.js",
+    "static/js/2.b67fb69a.chunk.js.map": "/static/js/2.b67fb69a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.cb0446861e6fab1c358855079654146f.js": "/precache-manifest.cb0446861e6fab1c358855079654146f.js",
+    "precache-manifest.558979f48eae508ff8fb59b419df114d.js": "/precache-manifest.558979f48eae508ff8fb59b419df114d.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.bf0413c3.chunk.css.map": "/static/css/2.bf0413c3.chunk.css.map",
-    "static/css/main.9937df53.chunk.css.map": "/static/css/main.9937df53.chunk.css.map",
-    "static/js/2.e624162f.chunk.js.LICENSE.txt": "/static/js/2.e624162f.chunk.js.LICENSE.txt",
+    "static/css/main.9d6f33c9.chunk.css.map": "/static/css/main.9d6f33c9.chunk.css.map",
+    "static/js/2.b67fb69a.chunk.js.LICENSE.txt": "/static/js/2.b67fb69a.chunk.js.LICENSE.txt",
     "static/media/biography-desktop.jpg": "/static/media/biography-desktop.ae77f68c.jpg",
     "static/media/biography-tablet.jpg": "/static/media/biography-tablet.491a5a9c.jpg",
-    "static/media/contact-desktop.jpg": "/static/media/contact-desktop.133bb143.jpg",
     "static/media/home-desktop.jpg": "/static/media/home-desktop.eaeac059.jpg",
     "static/media/home-mobile.jpg": "/static/media/home-mobile.c685a563.jpg",
     "static/media/home-tablet.jpg": "/static/media/home-tablet.b1689c53.jpg",
@@ -25,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.3125c67e.js",
     "static/css/2.bf0413c3.chunk.css",
-    "static/js/2.e624162f.chunk.js",
-    "static/css/main.9937df53.chunk.css",
-    "static/js/main.2bde7cc9.chunk.js"
+    "static/js/2.b67fb69a.chunk.js",
+    "static/css/main.9d6f33c9.chunk.css",
+    "static/js/main.3b519246.chunk.js"
   ]
 }
