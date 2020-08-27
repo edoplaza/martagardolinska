@@ -1,0 +1,80 @@
+.quote {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transform: translateY(15px);
+  position: relative;
+}
+
+.quote-highlight {
+  font-size: 3rem;
+  color: black;
+  font-weight: 700;
+  line-height: 3.2rem;
+  margin: 0 0 1rem 0;
+}
+
+.quote-text {
+  font-size: 2rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+}
+
+.quote-footer {
+  border-top: 1px solid $gray;
+  padding: 2rem 0 0 0;
+  margin: 2rem 0 0 0;
+}
+
+.quote-author, .quote-source {
+  display: inline-block;
+  color: black;
+  margin: 0 1rem 0 0;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+}
+
+.quote-source {
+  color: $red;
+}
+
+@include media("<=desktop") {
+  .quote {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .quote-text {
+    margin: 0 0 2rem 0;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .quote-author, .quote-source {
+     font-size: 1.8rem;
+    line-height: 3rem;
+
+  }
+
+}
+
+
+@include media("<=tablet") {
+  .quote {
+    max-width: 100%;
+    background: white;
+    width: 90%;
+    margin: 0 auto;
+  }
+  // .quote-text {
+  //   font-size: 1.6rem;
+  //   line-height: 2.8rem;
+  //   border-bottom: 1px solid lighten($gray, 40%);
+  // }
+  // .quote-author, .quote-source {
+  //   font-size: 1.8rem;
+  //   line-height: 2.8rem;
+  // }
+
+}
+
+

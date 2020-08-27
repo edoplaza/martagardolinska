@@ -1,0 +1,20 @@
+.photos {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.photos-content {
+  padding: 4rem 0;
+
+}
+
+.photos-list {
+  width: 100%;
+
+}
+
+@include media("<tablet") {
+  .photos-content {
+    padding: 2rem 0;
+  }
+}

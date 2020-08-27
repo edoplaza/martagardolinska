@@ -1,0 +1,122 @@
+.nav {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(2px);
+    position: relative;
+  }
+  li {
+    margin: 0 0 0 3rem;
+  }
+  a {
+    font-size: 2rem;
+    color: black;
+    font-weight: 400;
+    color: black;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $red;
+      transition: color 0.3s ease;
+    }
+    &.active {
+      color: $red;
+    }
+  }
+}
+
+@include media("<desktop") {
+  .nav {
+    display: none;
+    background: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 15;
+    &.expanded {
+      display: block;
+      a {
+        animation: blur 0.7s  ease-in-out forwards;
+      }
+      a.active {
+        animation: blurActive 0.7s  ease-in-out forwards;
+      }
+    }
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: 100%;
+      padding: 8rem 4rem 4rem 8rem;
+    }
+
+    li {
+      margin: 0 0 3rem 0;
+    }
+
+    a {
+      font-size: 4.8rem;
+      font-weight: 300;
+    }
+  }
+}
+
+@include media("<tablet") {
+  .nav {
+    ul {
+      padding: 6rem 4rem 4rem 4rem;
+    }
+    a {
+      font-size: 4rem;
+    }
+  }
+}
+
+@include media("<phone") {
+  .nav {
+    ul {
+      padding: 6rem 4rem 4rem 3rem;
+    }
+    li {
+      margin: 0 0 2.2rem 0;
+    }
+    a {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+@keyframes appear {
+  0%   {
+   opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+
+@keyframes blur {
+  0%   {
+    color: transparent;
+    text-shadow: 0 0 7px rgba(0,0,0,0.5);
+  }
+  100% {
+    color: black;
+    text-shadow: 0 0 0 rgba(0,0,0,0);
+  }
+}
+
+@keyframes blurACtive {
+  0%   {
+    color: transparent;
+    text-shadow: 0 0 7px rgba(0,0,0,0.5);
+  }
+  100% {
+    color: $red;
+    text-shadow: 0 0 0 rgba(0,0,0,0);
+  }
+}
+
+

@@ -1,0 +1,165 @@
+*, html, body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html, body {
+  //height: 100%;
+}
+
+body {
+   background: $pale;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
+
+input, button {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+.container-xl {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+.page {
+  padding: 100px 0 80px 0;
+  height: 100vh;
+
+}
+
+.page-content {
+  padding: 150px 0 0 40px;
+
+}
+
+.hidden-load {
+  display: none;
+}
+
+.more {
+  button {
+    background: $red;
+    padding: 1rem;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+  }
+}
+
+@include media("<tablet") {
+  .page {
+    padding: 70px 0 20px 0;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 3rem;
+  }
+  .container-xl {
+    padding: 0 3rem;
+  }
+  .page-content {
+    padding: 40px 0;
+
+  }
+}
+
+@include media("<phone") {
+  .page {
+    padding: 80px 0 20px 0;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+  .container-xl {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+  .page-content {
+    padding: 20px 0;
+  }
+}
+
+// React Images Override
+
+#react-images-container{
+  background-color: #FFF;
+}
+
+.react-images__container,
+.react-images__header,
+.react-images__header--isModal,
+.react-images__blanket,
+.react-images__footer,
+.react-images__footer--isModal,
+.react-images__container--isModal {
+  background: white !important;
+  &:hover {
+    background: white !important;
+  }
+}
+
+.react-images__frame,
+.react-images__header_button,
+.react-images__navigation,
+.react-images__navigation--isModal {
+  color: $red;
+  svg {
+    fill: $red;
+    stroke: $red;
+  }
+}
+
+.react-images__footer__count,
+.react-images__footer__count--isModal{
+  color: $red;
+}
+
+.react-images__view,
+.react-images__view--isModal {
+  padding: 0 40px;
+}
+
+@include media("<tablet") {
+  .react-images__view,
+  .react-images__view--isModal {
+    padding: 0 20px;
+  }
+}
+
+.react-images__navigation,
+.react-images__navigation--isModal {
+  button {
+    left: 50px;
+    &:last-child {
+      left: auto;
+      right: 50px;
+    }
+  }
+
+}
+
+

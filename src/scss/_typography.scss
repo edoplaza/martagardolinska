@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+*, html, body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.entry {
+  p, a {
+    font-size: 1.7rem;
+    line-height: 3.3rem;
+    font-weight: 400;
+    color: black;
+  }
+
+  p > a {
+    position: relative;
+    &:after {
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background: black;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      content: '';
+    }
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  li {
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+    color: black;
+  }
+}
+
+.text {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+
+.text-medium {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+.title {
+  font-size: 4.5rem;
+  line-height: 5.5rem;
+  font-weight: 300;
+  color: black;
+  position: relative;
+  display: block;
+  padding: 0 0 0.8rem 0;
+  margin: 0 0 3rem 0;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 84px;
+    height: 2px;
+    background: $red;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.subtitle {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+}
+
+.subtitle-big {
+  font-size: 2.2rem;
+  line-height: 3rem;
+  font-weight: 600;
+}
+
+.subtitle-small {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: 600;
+}
+.see-more {
+  border: none;
+  background: transparent;
+  color: $red;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 2rem 0;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  padding: 0 2rem 0 0;
+  svg {
+    right: 0;
+    top: 3px;
+    width: 12px;
+    position: absolute;
+  }
+
+  &.up {
+    svg {
+      transform: rotate(180deg);
+      top: 2px;
+    }
+  }
+}
+
+@include media("<=tablet") {
+  .title {
+    font-size: 3.4rem;
+    line-height: 4.5rem;
+    margin: 0 0 3rem 0;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+
+  .see-more {
+    display: none;
+  }
+}
+
+@include media("<=phone") {
+  .title {
+    margin: 0 0 2rem 0;
+  }
+  .entry {
+    p, a {
+      font-size: 1.5rem;
+      line-height: 2.8rem;
+    }
+
+    li {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin: 0 0 1rem 0;
+    }
+  }
+}
+

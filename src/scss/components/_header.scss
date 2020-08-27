@@ -1,0 +1,35 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem 8rem;
+  z-index: 24;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  //background: darken($pale, 5%);
+}
+
+@include media("<hd") {
+  .header {
+    padding: 3rem 4rem;
+  }
+}
+
+
+@include media("<tablet") {
+  .header {
+
+    padding: 2rem 3rem;
+  }
+}
+
+@include media("<phone") {
+  .header {
+    padding: 1.5rem 2rem;
+    .logo {
+      width: 200px;
+    }
+  }
+}

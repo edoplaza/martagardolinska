@@ -1,0 +1,35 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 1rem 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  display: none;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  li {
+    margin: 0 0 0 2rem;
+  }
+  a {
+    font-size: 2rem;
+    color: $red;
+  }
+  svg {
+    color: $red;
+    fill: $red;
+    height: 18px;
+  }
+}
+
+@include media("<=tablet") {
+  .footer-list {
+    display: none;
+  }
+}

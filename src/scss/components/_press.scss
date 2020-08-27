@@ -1,0 +1,15 @@
+.press-content {
+  padding: 4rem 0;
+}
+
+.press-list {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+@include media("<tablet") {
+  .press-content {
+    padding: 2rem 0;
+  }
+}
