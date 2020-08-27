@@ -20,7 +20,6 @@ const Videos = () => {
     )
   }, [])
 
-
   return (
     <div className="page videos">
       <div className="page-header container">
@@ -28,15 +27,12 @@ const Videos = () => {
       </div>
       <div className="videos-content">
         <div className="video-list container">
-
         {
-          videos.map(video => (
-            <Video
-              url = {video.video_url}
-              title={video.video_title}
-              key={video.video_url}
-            />
-          ))
+          videos.map(video => <Video
+            url = {video.video_url}
+            title={video.video_title}
+            key={video.video_url}
+          />)
         }
         </div>
       </div>

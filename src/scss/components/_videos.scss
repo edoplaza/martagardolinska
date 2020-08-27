@@ -11,9 +11,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   width: 100%;
-
 }
 
 .video {
@@ -81,7 +79,6 @@
 @include media("<phone") {
   .video {
     margin: 0 0 4rem 0;
-
   }
 
   .video-frame {

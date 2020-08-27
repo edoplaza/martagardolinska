@@ -16,31 +16,20 @@ const Biography = () => {
   } = biography
 
   const [english, setEnglish] = useState(true);
-  const showEnglish = () => {
-    setEnglish(true)
-  }
-
-  const showPolish = () => {
-    setEnglish(false)
-  }
 
   useEffect(() => {
     getBiography();
     closeMenu();
-    tl
-    .to('.biography-bg', {
+    tl.to('.biography-bg', {
       duration: 1,
-      delay: 0.2,
       ease: 'ease-in-out',
       css: {
         opacity: 1,
         width: '105%',
         height: '105%'
       }}
-    )
-    .to('.biography-container', {
+    ).to('.biography-container', {
       duration: 0.8,
-      delay: -1,
       css: {
         opacity: 1,
         y: 0
@@ -60,8 +49,8 @@ const Biography = () => {
           {english && <h1 className="title">Biography</h1>}
           {!english && <h1 className="title">Biografia</h1>}
           <div className="biography-languages">
-            <button onClick={() => showEnglish()}>English</button>
-            <button onClick={() => showPolish()}>Polish</button>
+            <button onClick={() => setEnglish(true)}>English</button>
+            <button onClick={() => setEnglish(false)}>Polish</button>
           </div>
           {english && <div className="biography-header" dangerouslySetInnerHTML={{ __html: biography_highlight }}></div>}
           {!english && <div className="biography-header" dangerouslySetInnerHTML={{ __html: biography_highlight_polish }}></div>}

@@ -52,11 +52,8 @@
   .quote-author, .quote-source {
      font-size: 1.8rem;
     line-height: 3rem;
-
   }
-
 }
-
 
 @include media("<=tablet") {
   .quote {
@@ -65,16 +62,4 @@
     width: 90%;
     margin: 0 auto;
   }
-  // .quote-text {
-  //   font-size: 1.6rem;
-  //   line-height: 2.8rem;
-  //   border-bottom: 1px solid lighten($gray, 40%);
-  // }
-  // .quote-author, .quote-source {
-  //   font-size: 1.8rem;
-  //   line-height: 2.8rem;
-  // }
-
 }
-
-

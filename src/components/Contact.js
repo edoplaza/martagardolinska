@@ -2,8 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import gsap from 'gsap';
 import { MainContext } from '../contexts/MainContext';
 
-import desktop from '../img/contact-desktop.jpg';
-
 let tl = gsap.timeline();
 
 const Contact = () => {
@@ -60,7 +58,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-right">
-          <img src={contact_photo} />
+          <img src={contact_photo} alt="" />
         </div>
       </div>
     </div>

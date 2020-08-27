@@ -2,15 +2,10 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 html {
   font-size: 62.5%;
-}
-
-html, body {
-  //height: 100%;
 }
 
 body {
@@ -104,7 +99,6 @@ input, button {
 }
 
 // React Images Override
-
 #react-images-container{
   background-color: #FFF;
 }
@@ -159,7 +153,4 @@ input, button {
       right: 50px;
     }
   }
-
 }
-
-

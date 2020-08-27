@@ -4,9 +4,7 @@ import { MainContext } from '../contexts/MainContext';
 import Quote from './Quote';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import Slider from 'react-slick';
-
 import mobile from '../img/home-mobile.jpg';
 import tablet from '../img/home-tablet.jpg';
 import desktop from '../img/home-desktop.jpg';
@@ -14,7 +12,6 @@ import desktop from '../img/home-desktop.jpg';
 let tl = gsap.timeline();
 
 const Home = () => {
-
   const settings = {
     dots: false,
     fade: true,
@@ -96,8 +93,8 @@ const Home = () => {
         </div>
       </div>
       <div className="hidden-load">
-        <img src={contact_photo}></img>
-        {photos.map(photo => <img key={photo.src} src={photo.src}></img>)}
+        <img src={contact_photo} alt=""></img>
+        {photos.map(photo => <img key={photo.src} src={photo.src} alt=""></img>)}
       </div>
     </div>
   )

@@ -11,18 +11,10 @@ const Footer = props => {
   return (
     <footer className="footer">
       <ul className="footer-list">
-       <li>
-          <Link to='/'><Facebook /></Link>
-        </li>
-        <li>
-          <Link to='/'><Twitter /></Link>
-        </li>
-        <li>
-          <Link to='/'><Instagram /></Link>
-        </li>
-
+        <li><Link to='/'><Facebook /></Link></li>
+        <li><Link to='/'><Twitter /></Link></li>
+        <li><Link to='/'><Instagram /></Link></li>
       </ul>
-
     </footer>
   )
 }

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Location from '../svg/location';
 
 const Event = ({title, orchestra, soloists, date, text, location, time }) => {
   useEffect(() => {
@@ -7,7 +6,6 @@ const Event = ({title, orchestra, soloists, date, text, location, time }) => {
 
   const day = date.split('/')[0];
   const month = date.split('/')[1].toUpperCase();
-
 
   return (
     <div className="event">
@@ -20,7 +18,7 @@ const Event = ({title, orchestra, soloists, date, text, location, time }) => {
           <h2 className="event-title">{title}</h2>
           { orchestra && <h3 className="event-orchestra">{orchestra}</h3>}
           { soloists &&  <div className="event-soloists entry" dangerouslySetInnerHTML={{ __html: soloists }}></div> }
-          
+
           <div
             className="event-program"
             dangerouslySetInnerHTML={{ __html: text }}

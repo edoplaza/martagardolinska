@@ -10,7 +10,6 @@ const Calendar = () => {
   const {  getEvents, events, eventsTotal, closeMenu } = useContext(MainContext);
 
   useEffect(() => {
-    
     getEvents(1)
     setSize(1);
     closeMenu();

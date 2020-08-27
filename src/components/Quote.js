@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
-import { MainContext } from '../contexts/MainContext';
 import gsap from 'gsap';
 
 let tl = gsap.timeline();
 
 const Quote = ({highlight, text, meta}) => {
-
   useEffect(() => {
     tl.to('.quote', {
       duration: 1,

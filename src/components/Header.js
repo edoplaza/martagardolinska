@@ -10,9 +10,7 @@ const Header = props => {
 
   return (
     <header className="header">
-      <Link to='/'>
-        <Logo/>
-      </Link>
+      <Link to='/'><Logo/></Link>
       <Nav isMenuOpen = {isMenuOpen}/>
       <span className="pull-wrapper"  onClick={() => toggleMenu()}>
         <Pull isMenuOpen = {isMenuOpen}/>

@@ -2,8 +2,6 @@ import React, { useContext, useEffect, useState, useCallback } from 'react';
 import gsap from 'gsap';
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-
-
 import { MainContext } from '../contexts/MainContext';
 
 let tl = gsap.timeline();
@@ -19,11 +17,8 @@ const Photos = () => {
     closeMenu();
     getPhotos();
     defineMargins();
-
     window.addEventListener("resize", defineMargins());
-
     return () => window.removeEventListener("resize", defineMargins());
-
   }, [])
 
   useEffect(() => {
@@ -37,7 +32,7 @@ const Photos = () => {
         }}
       )
     }
-  }, [photos])
+  }, [pics, photos])
 
   const defineColumns = () => {
     let width = window.innerWidth;
@@ -75,7 +70,6 @@ const Photos = () => {
     setViewerIsOpen(false);
   };
 
-
   return (
     <div className="page photos">
       <div className="page-header container-xl">
@@ -83,7 +77,13 @@ const Photos = () => {
       </div>
       <div className="photos-content">
         <div className="photos-list container-xl">
-        { photos.length && <Gallery photos={photos}  columns={() => defineColumns()} margin={margin} direction='column' onClick={openLightbox} /> }
+        { photos.length && <Gallery
+            photos={photos}
+            columns={() => defineColumns()}
+            margin={margin} direction='column'
+            onClick={openLightbox}
+          />
+        }
 
         <ModalGateway>
           {viewerIsOpen ? (
@@ -92,8 +92,6 @@ const Photos = () => {
                 currentIndex={currentImage}
                 views={photos.map(photo => ({
                   ...photo,
-                  // srcset: x.srcSet,
-                  // caption: x.title
                 }))}
               />
             </Modal>

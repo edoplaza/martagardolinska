@@ -9,7 +9,6 @@ const Video = ({title, url}) => {
     var regex = /<iframe.*?src=['"](.*?)['"]/;
     var src = regex.exec(url)[1];
     setLink(src);
-
   }, [])
 
   return (
