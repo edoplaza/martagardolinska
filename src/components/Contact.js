@@ -17,6 +17,8 @@ const Contact = () => {
   } = social
 
   const {
+    manager_name,
+    manager_link,
     contact_info,
     contact_photo
   } = contact
@@ -43,6 +45,7 @@ const Contact = () => {
           </div>
           <div className="contact-section">
             <h2 className="subtitle-big">General Management</h2>
+            <a className="contact-manager" href={manager_link} target="_blank">{manager_name}</a>
             <div dangerouslySetInnerHTML={{ __html: contact_info }}></div>
           </div>
           <div className="page-header">

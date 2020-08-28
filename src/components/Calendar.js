@@ -60,7 +60,7 @@ const Calendar = () => {
           })
         }
       </div>
-      { eventsTotal.length > events.length &&  <div className="more container"><button onClick={getMore}>Load More</button></div> }
+      { eventsTotal.length > events.length &&  <div className="more container"><button onClick={getMore}>Past Events</button></div> }
     </div>
   )
 }

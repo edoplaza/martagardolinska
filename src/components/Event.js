@@ -20,7 +20,7 @@ const Event = ({title, orchestra, soloists, date, text, location, time }) => {
           { soloists &&  <div className="event-soloists entry" dangerouslySetInnerHTML={{ __html: soloists }}></div> }
 
           <div
-            className="event-program"
+            className="event-program entry"
             dangerouslySetInnerHTML={{ __html: text }}
           >
           </div>
