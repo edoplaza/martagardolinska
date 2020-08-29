@@ -14,8 +14,9 @@ const MainContextProvider = props => {
   const [pressTotal, setPressTotal] = useState([]);
   const [press, setPress] = useState([]);
   const [photos, setPhotos] = useState([]);
-  const [events, setEvents] = useState([]);
-  const [eventsTotal, setEventsTotal] = useState([]);
+  const [pastEvents, setPastEvents] = useState([]);
+  const [futureEvents, setFutureEvents] = useState([]);
+  const [pastEventsTotal, setPastEventsTotal] = useState([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 
@@ -62,10 +63,22 @@ const MainContextProvider = props => {
 
   const getEvents = async (size) => {
     const result = await axios(`${url}/wp-json/wp/v2/events`);
-    const ev = result.data;
-    setEventsTotal(ev);
-    const items = ev.slice(0, size)
-    setEvents([...items]);
+
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth()+1; 
+    let yyyy = today.getFullYear();
+    if(dd<10) dd='0'+dd;
+    if(mm<10)  mm='0'+mm;
+    let now = parseInt(yyyy+''+mm+''+dd);
+
+    const future = result.data.filter(f => parseInt(f.acf.date_event) >= now );
+    const past = result.data.filter(p => parseInt(p.acf.date_event) < now );
+    
+    setFutureEvents(future);
+    setPastEventsTotal(past);
+    const pastSliced = past.slice(0, size)
+    setPastEvents([...pastSliced]);
   }
 
   const getPhotos = async () => {
@@ -108,8 +121,9 @@ const MainContextProvider = props => {
       getPhotos,
       photos,
       getVideos,
-      events,
-      eventsTotal,
+      pastEvents,
+      futureEvents,
+      pastEventsTotal,
       getEvents,
       isMenuOpen,
       toggleMenu,

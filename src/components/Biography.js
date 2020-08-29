@@ -50,7 +50,7 @@ const Biography = () => {
           {!english && <h1 className="title">Biografia</h1>}
           <div className="biography-languages">
             <button onClick={() => setEnglish(true)}>English</button>
-            <button onClick={() => setEnglish(false)}>Polsky</button>
+            <button onClick={() => setEnglish(false)}>Polski</button>
           </div>
           {english && <div className="biography-header" dangerouslySetInnerHTML={{ __html: biography_highlight }}></div>}
           {!english && <div className="biography-header" dangerouslySetInnerHTML={{ __html: biography_highlight_polish }}></div>}

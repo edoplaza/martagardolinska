@@ -7,11 +7,11 @@ let tl = gsap.timeline();
 
 const Calendar = () => {
   const [size, setSize] = useState(0);
-  const {  getEvents, events, eventsTotal, closeMenu } = useContext(MainContext);
+  const {  getEvents, pastEvents, pastEventsTotal, futureEvents, closeMenu } = useContext(MainContext);
 
   useEffect(() => {
-    getEvents(1)
-    setSize(1);
+    getEvents(0)
+    setSize(0);
     closeMenu();
     tl.to('.calendar', {
       duration: 1,
@@ -23,8 +23,8 @@ const Calendar = () => {
   }, [])
 
   const getMore = () => {
-    getEvents(size + 1);
-    setSize(size + 1);
+    getEvents(size + 4);
+    setSize(size + 4);
   }
 
   return (
@@ -34,7 +34,34 @@ const Calendar = () => {
       </div>
       <div className="event-list container">
         {
-          events.map(event => {
+          futureEvents.map(event => {
+            const {
+              date_event,
+              location_name_event,
+              orchestra_event,
+              soloists_event,
+              text_event,
+              time_event,
+              title_event
+            } = event.acf
+
+            return (
+              <Event
+                key={date_event+title_event}
+                title={title_event}
+                orchestra={orchestra_event}
+                soloists={soloists_event}
+                date={date_event}
+                text={text_event}
+                location={location_name_event}
+                time={time_event}
+              />
+            )
+          })
+        }
+
+        {
+          pastEvents.map(event => {
             const {
               date_event,
               location_name_event,
@@ -60,7 +87,7 @@ const Calendar = () => {
           })
         }
       </div>
-      { eventsTotal.length > events.length &&  <div className="more container"><button onClick={getMore}>Past Events</button></div> }
+      { pastEventsTotal.length > pastEvents.length &&  <div className="more container"><button onClick={getMore}>Past Events</button></div> }
     </div>
   )
 }

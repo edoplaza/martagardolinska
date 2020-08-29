@@ -10,8 +10,8 @@ const Press = () => {
   const { press, getPress, pressTotal, closeMenu } = useContext(MainContext);
 
   useEffect(() => {
-    getPress(1);
-    setSize(1);
+    getPress(5);
+    setSize(5);
     closeMenu();
     tl.to('.press-list', {
       duration: 1,

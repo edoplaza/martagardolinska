@@ -4,15 +4,17 @@ const Event = ({title, orchestra, soloists, date, text, location, time }) => {
   useEffect(() => {
   }, [])
 
-  const day = date.split('/')[0];
-  const month = date.split('/')[1].toUpperCase();
+  const day = date.slice(-2);
+  const month = date.slice(4,6);
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  const monthString = months[month - 1].toUpperCase();
 
   return (
     <div className="event">
       <div className="event-inner">
         <div className="event-date">
           <h2 className="event-day">{day}</h2>
-          <span className="event-month">{month}</span>
+          <span className="event-month">{monthString}</span>
         </div>
         <div className="event-info">
           <h2 className="event-title">{title}</h2>

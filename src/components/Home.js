@@ -50,9 +50,9 @@ const Home = () => {
     getSocial();
     getBiography();
     getVideos();
-    getPress(1);
+    getPress(5);
     getPhotos();
-    getEvents(1);
+    getEvents(0);
     closeMenu();
 
     tl.to('.home-bg', {
